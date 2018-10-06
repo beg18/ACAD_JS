@@ -17,6 +17,7 @@
 */
 var budjet = prompt("Ваш бюджет?", "65000");
 var shopName = prompt("Название вашего магазина?", "");
+var time = 8;
 
 var mainList = {
     shopBudjet: budjet,
@@ -25,7 +26,56 @@ var mainList = {
     employers: {},
     open: false
 }
-mainList.shopGoods[0] = prompt("Какой тип товаров будем продавать?", "");
+/*mainList.shopGoods[0] = prompt("Какой тип товаров будем продавать?", "");
 mainList.shopGoods[1] = prompt("Какой тип товаров будем продавать?", "");
-mainList.shopGoods[2] = prompt("Какой тип товаров будем продавать?", "");
+mainList.shopGoods[2] = prompt("Какой тип товаров будем продавать?", "");*/
 alert(mainList.shopBudjet / 30);
+
+for(var i = 0; i < 3; i ++){
+    var answer = prompt("Какой тип товаров будем продавать?", "");
+   if((typeof(answer))==='string' && (typeof(answer))=== null && answer.length < 50 && (typeof(answer))!= ''){
+       console.log('Все верно!');
+       mainList.shopGoods[i] = answer;
+
+   }
+}
+console.log(mainList);
+
+switch (time) {
+  case 24:
+     alert('Слишком поздно');
+  break;
+  case  8:
+   alert('Время рабочее');
+  break;
+  case 25:
+    alert('Такого не бывает');
+  break;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
